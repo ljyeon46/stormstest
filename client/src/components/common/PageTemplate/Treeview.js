@@ -22,7 +22,7 @@ const treeData = [
   },
 ];
 
-class Demo extends React.Component {
+class Treeview extends React.Component {
   static propTypes = {
     keys: PropTypes.array,
   };
@@ -79,4 +79,4 @@ class Demo extends React.Component {
   }
 }
 
-export default Demo;
+export default Treeview;

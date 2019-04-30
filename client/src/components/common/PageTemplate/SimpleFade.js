@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import Paper from '@material-ui/core/Paper';
 import Fade from '@material-ui/core/Fade';
-import Demo from './Treeview';
+import Treeview from './Treeview';
 
 const styles = theme => ({
   root: {
@@ -46,7 +46,7 @@ class SimpleFade extends React.Component {
         <div className={classes.container}>
           <Fade in={checked}>
             <Paper elevation={4} className={classes.paper}>
-                <Demo/>
+                <Treeview/>
             </Paper>
           </Fade>
         </div>
