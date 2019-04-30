@@ -13,15 +13,17 @@ import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/Mail';
 import SimpleTabs from './SimpleTabs';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: purple[500] }, // Purple and green play nicely together.
-    secondary: { main: '#bdbdbd' }, // This is just green.A700 as hex.
-  },
-  typography: { useNextVariants: true },
+    primary: {
+      main: '#5D6064', //메인회색
+    },
+    secondary: {
+      main: '#ECECEC', //탭아래색
+      contrastText: '#5D6064', //알림배너 글씨색
+    },
+   },
 });
 
 
