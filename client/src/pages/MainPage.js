@@ -1,12 +1,13 @@
 import React from 'react';
 import SearchAppBar from '../components/common/PageTemplate/PageTemplate';
-import Damo from '../components/common/PageTemplate/Treeview'
+import Damo from '../components/common/PageTemplate/Treeview';
+import SimpleFade from '../components/common/PageTemplate/SimpleFade';
 
 const MainPage = () => {
     return (
         <div>
             <SearchAppBar/>
-            <Damo/>
+            <SimpleFade/>
         </div>
     );
 };
