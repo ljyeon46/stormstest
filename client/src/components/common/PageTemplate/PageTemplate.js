@@ -11,6 +11,20 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/Mail';
+import SimpleTabs from './SimpleTabs';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: purple[500] }, // Purple and green play nicely together.
+    secondary: { main: '#bdbdbd' }, // This is just green.A700 as hex.
+  },
+  typography: { useNextVariants: true },
+});
+
+
 
 const styles = theme => ({
   root: {
@@ -83,6 +97,7 @@ const styles = theme => ({
 function SearchAppBar(props) {
   const { classes } = props;
   return (
+    <MuiThemeProvider theme={theme}>
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
@@ -92,6 +107,7 @@ function SearchAppBar(props) {
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
             STORMS
           </Typography>
+          <SimpleTabs/>
           <div className={classes.grow} />
           <div>
               <Badge className={classes.margin} badgeContent={10} color="secondary">
@@ -113,6 +129,7 @@ function SearchAppBar(props) {
         </Toolbar>
       </AppBar>
     </div>
+    </MuiThemeProvider>
   );
 }
 
