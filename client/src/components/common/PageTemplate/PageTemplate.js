@@ -9,6 +9,8 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Badge from '@material-ui/core/Badge';
+import MailIcon from '@material-ui/icons/Mail';
 
 const styles = theme => ({
   root: {
@@ -68,6 +70,14 @@ const styles = theme => ({
       },
     },
   },
+
+  margin: {
+    margin: theme.spacing.unit * 2,
+  },
+  padding: {
+    padding: `0 ${theme.spacing.unit * 2}px`,
+  },
+
 });
 
 function SearchAppBar(props) {
@@ -83,6 +93,11 @@ function SearchAppBar(props) {
             STORMS
           </Typography>
           <div className={classes.grow} />
+          <div>
+              <Badge className={classes.margin} badgeContent={10} color="secondary">
+                <MailIcon />
+              </Badge>
+            </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
