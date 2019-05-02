@@ -59,8 +59,8 @@ class Treeview extends React.Component {
   };
 
   render() {   
-    return (
-      <div style={{ margin: '0 20px' }}>
+    return ( // 상 우 하 좌 시계방향여백
+      <div style={{ margin: '10px  0 500px 0' }}> 
         <Tree
           className="myCls"
           showLine

@@ -16,10 +16,6 @@ const styles = theme => ({
   paper: {
     margin: theme.spacing.unit,
   },
-  svg: {
-    width: 100,
-    height: 100,
-  },
   polygon: {
     fill: theme.palette.common.white,
     stroke: theme.palette.divider,
@@ -45,7 +41,7 @@ class SimpleFade extends React.Component {
         <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />
         <div className={classes.container}>
           <Fade in={checked}>
-            <Paper elevation={4} className={classes.paper}>
+            <Paper elevation={8} className={classes.paper}>
                 <Treeview/>
             </Paper>
           </Fade>
