@@ -107,7 +107,7 @@ function SearchAppBar(props) {
               <Badge className={classes.margin} badgeContent={10} color="secondary">
                 <MailIcon />
               </Badge>
-            </div>
+          </div>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />

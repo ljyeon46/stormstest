@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Tree from 'rc-tree';
 import 'rc-tree/assets/index.css';
+import ContainedButtons from './TreeButton';
 
 const treeData = [
   { key: '0-0', title: '서울', children:
@@ -23,6 +24,7 @@ const treeData = [
 ];
 
 class Treeview extends React.Component {
+    
   static propTypes = {
     keys: PropTypes.array,
   };
@@ -53,14 +55,27 @@ class Treeview extends React.Component {
   onCheck = (checkedKeys, info) => {
     console.log('onCheck', checkedKeys, info);
   };
+
+  onEdit = () => {
+    if (!window.confirm('추가하시겠습니까?')) {
+        return;
+      }
+ };
+  onDel = (e) => {
+    if (!window.confirm('삭제하시겠습니까?')) {
+      return;
+    }
+    e.stopPropagation();
+  };
   
   setTreeRef = (tree) => {
     this.tree = tree;
   };
 
   render() {   
+          
     return ( // 상 우 하 좌 시계방향여백
-      <div style={{ margin: '10px  0 500px 0' }}> 
+      <div style={{ margin: '10px  0 10px 0' }}> 
         <Tree
           className="myCls"
           showLine
@@ -73,10 +88,21 @@ class Treeview extends React.Component {
           onSelect={this.onSelect}
           onCheck={this.onCheck}
           treeData={treeData}
-        />
+        />               
+
+        <div style={{ margin: '600px  0 0 0' }}>
+            <ContainedButtons />
+        </div>
+
       </div>
+     
+     
     );
+
   }
 }
-
 export default Treeview;
+
+
+
+
