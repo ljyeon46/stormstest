@@ -1,14 +1,14 @@
 import React from 'react';
-import SearchAppBar from '../components/common/PageTemplate/PageTemplate';
-import SimpleFade from '../components/common/PageTemplate/SimpleFade';
+import PersistentDrawerLeft from '../components/common/PageTemplate/Drawers';
+import RecipeReviewCard from '../components/common/main/TodayReview'
 
 const MainPage = () => {
     return (
         <div>
-            <SearchAppBar/>
-            <SimpleFade/>
+            <PersistentDrawerLeft/>
+            <RecipeReviewCard/>
         </div>
     );
-};
+}
 
 export default MainPage;

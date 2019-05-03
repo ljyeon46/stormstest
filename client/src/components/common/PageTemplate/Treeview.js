@@ -54,20 +54,7 @@ class Treeview extends React.Component {
   };
   onCheck = (checkedKeys, info) => {
     console.log('onCheck', checkedKeys, info);
-  };
-
-  onEdit = () => {
-    if (!window.confirm('추가하시겠습니까?')) {
-        return;
-      }
- };
-  onDel = (e) => {
-    if (!window.confirm('삭제하시겠습니까?')) {
-      return;
-    }
-    e.stopPropagation();
-  };
-  
+  };  
   setTreeRef = (tree) => {
     this.tree = tree;
   };
@@ -90,7 +77,7 @@ class Treeview extends React.Component {
           treeData={treeData}
         />               
 
-        <div style={{ margin: '600px  0 0 0' }}>
+        <div style={{ margin: '600px  0 0 15px' }}>
             <ContainedButtons />
         </div>
 
