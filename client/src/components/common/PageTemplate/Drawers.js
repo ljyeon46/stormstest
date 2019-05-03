@@ -20,6 +20,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import grey from '@material-ui/core/colors/grey';
+import RecipeReviewCard from '../main/TodayReview';
+import CustomizedTable from '../main/TimeNotice'
 
 
 const drawerWidth = 240;
@@ -73,20 +75,21 @@ const styles = theme => ({
     justifyContent: 'flex-end',
   },
   content: {
-    flexGrow: 0.5,
-    padding: theme.spacing.unit * 1,
+    flexGrow: 1,
+    backgroundColor : grey[50],
+    padding: theme.spacing.unit * 2,
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: -drawerWidth,
+    marginLeft: -210,
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    marginLeft: 0,
+    marginLeft: -10,
   },
   search: {
     position: 'relative',
@@ -128,6 +131,12 @@ const styles = theme => ({
         width: 200,
       },
     },
+  },
+  margin: {
+    margin: theme.spacing.unit * 2,
+  },
+  padding: {
+    padding: `0 ${theme.spacing.unit * 2}px`,
   },
 });
 
@@ -212,8 +221,10 @@ class PersistentDrawerLeft extends React.Component {
         <main
           className={classNames(classes.content, {
             [classes.contentShift]: open,
-          })}
-        ></main>
+          })} >
+          <RecipeReviewCard/>
+          <CustomizedTable/>
+        </main>
       </div>
     );
   }
